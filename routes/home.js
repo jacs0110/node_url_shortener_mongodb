@@ -25,11 +25,11 @@ router.post('/', async (req, res) => {
 
     // create new short url for new link
     console.log('creating a new url')
-    let isUnique = true
+    let isUnique = false
     let code
 
     // generate unique short url for new link
-    while (isUnique) {
+    while (!isUnique) {
       code = Math.random().toString(36).slice(-5)
       let result = Link.findOne({
         shortUrl: `https://jacs-url-shortener-mongodb.herokuapp.com/${code}`
