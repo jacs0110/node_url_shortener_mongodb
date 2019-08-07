@@ -37,9 +37,9 @@ router.post('/', async (req, res) => {
       })
 
       if (result.length > 0) {
-        isUnique = true
-      } else {
         isUnique = false
+      } else {
+        isUnique = true
       }
     }
 
