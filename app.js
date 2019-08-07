@@ -13,7 +13,7 @@ const mongoose = require('mongoose')
 app.use(express.static('public'))
 
 // db
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/restaurantListDB', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/link', {
   useNewUrlParser: true,
   useCreateIndex: true
 })
